@@ -1,6 +1,18 @@
 apply plugin: 'org.jmailen.kotlinter'
+apply plugin: 'com.github.johnrengelman.shadow'
 
-android {
+shadowJar {
+    archiveFileName = "tachiyomi-$pkgNameSuffix-v$libVersion.$extVersionCode-.jar"
+    include "res/"
+    manifest {
+        attributes 'Class-Path': extClass, 'nsfw': project.ext.properties.getOrDefault("containsNsfw", false) ? 1 : 0, "extClass": extClass, "versionName": "$libVersion.$extVersionCode"
+    }
+}
+
+/*compileKotlin {
+    jvmTarget = JavaVersion.VERSION_1_8.toString()
+}*/
+/*android {
     compileSdkVersion AndroidConfig.compileSdk
     buildToolsVersion AndroidConfig.buildTools
 
@@ -56,7 +68,7 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
-}
+}*/
 
 repositories {
     mavenCentral()
@@ -80,5 +92,5 @@ dependencies {
     compileOnly project(':duktape-stub')
 }
 
-preBuild.dependsOn(lintKotlin)
+//preBuild.dependsOn(lintKotlin)
 lintKotlin.dependsOn(formatKotlin)

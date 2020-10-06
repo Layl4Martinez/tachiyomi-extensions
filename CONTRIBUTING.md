@@ -66,8 +66,7 @@ src/<lang>/<mysourcename>/
 Make sure that your new extension's `build.gradle` file follows the following structure:
 
 ```groovy
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
+apply plugin: 'kotlin'
 
 ext {
     extName = '<My source name>'

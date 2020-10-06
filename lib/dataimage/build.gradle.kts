@@ -1,9 +1,8 @@
 plugins {
-    id("com.android.library")
-    kotlin("android")
+    kotlin("jvm")
 }
 
-android {
+/*android {
     compileSdkVersion(AndroidConfig.compileSdk)
     buildToolsVersion(AndroidConfig.buildTools)
 
@@ -11,7 +10,7 @@ android {
         minSdkVersion(AndroidConfig.minSdk)
         targetSdkVersion(AndroidConfig.targetSdk)
     }
-}
+}*/
 
 repositories {
     mavenCentral()
