@@ -25,4 +25,6 @@ repositories {
 dependencies {
     compileOnly(Deps.kotlin.stdlib)
     compileOnly(Deps.okhttp)
+    // AndroidStub
+    compileOnly(project(":lib-android-stub"))
 }
