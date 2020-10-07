@@ -1,13 +1,28 @@
 apply plugin: 'org.jmailen.kotlinter'
-apply plugin: 'com.github.johnrengelman.shadow'
 
-shadowJar {
-    archiveFileName = "tachiyomi-$pkgNameSuffix-v$libVersion.$extVersionCode-.jar"
-    include "res/"
-    manifest {
-        attributes 'Class-Path': extClass, 'nsfw': project.ext.properties.getOrDefault("containsNsfw", false) ? 1 : 0, "extClass": extClass, "versionName": "$libVersion.$extVersionCode"
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+        resources {
+            srcDirs = ['res']
+        }
     }
 }
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path'     : extClass,
+                'nsfw'           : project.ext.properties.getOrDefault("containsNsfw", false) ? 1 : 0,
+                'extClass'       : extClass,
+                'versionName'    : "$libVersion.$extVersionCode"
+        )
+    }
+    archivesBaseName = "tachiyomi-$pkgNameSuffix-v$libVersion.$extVersionCode"
+}
+
 
 /*compileKotlin {
     jvmTarget = JavaVersion.VERSION_1_8.toString()
