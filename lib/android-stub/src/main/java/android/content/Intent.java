@@ -15,4 +15,8 @@ public class Intent {
         throw new Exception("stub");
     }
 
+    public Intent putExtra(String name, String value) throws Exception {
+        throw new Exception("stub");
+    }
+
 }
