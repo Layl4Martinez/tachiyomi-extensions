@@ -20,4 +20,6 @@ dependencies {
     compileOnly(Deps.kotlin.stdlib)
     compileOnly(Deps.okhttp)
     compileOnly(Deps.jsoup)
+    // AndroidStub
+    compileOnly(project(":lib-android-stub"))
 }
