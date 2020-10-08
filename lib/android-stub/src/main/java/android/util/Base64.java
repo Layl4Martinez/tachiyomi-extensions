@@ -6,4 +6,8 @@ public class Base64 {
     public static byte[] decode(String str, int flags) throws Exception {
         throw new Exception("stub");
     }
+
+    public static byte[] decode(byte[] input, int flags) throws Exception {
+        throw new Exception("stub");
+    }
 }

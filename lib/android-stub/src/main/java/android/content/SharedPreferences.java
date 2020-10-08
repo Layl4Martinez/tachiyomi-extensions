@@ -3,16 +3,23 @@ package android.content;
 public interface SharedPreferences {
 
     interface Editor {
-        SharedPreferences putInt(String string, int integer);
-        SharedPreferences putString(String string, String string2);
-
+        Editor putInt(String key, int value);
+        Editor putString(String key, String value);
+        Editor putBoolean(String key, boolean value);
+        Editor putLong(String key, long value);
+        boolean commit();
+        void apply();
     }
 
     Editor edit();
 
-    boolean commit();
-
     int getInt(String string, int integer);
 
     String getString(String string, String string2);
+
+    boolean getBoolean(String key, boolean defValue);
+
+    long getLong(String key, long defValue);
+
+    boolean contains(String key);
 }

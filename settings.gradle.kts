@@ -12,6 +12,12 @@ project(":lib-dataimage").projectDir = File("lib/dataimage")
 include(":lib-android-stub")
 project(":lib-android-stub").projectDir = File("lib/android-stub")
 
+include(":lib-rx-android-stub")
+project(":lib-rx-android-stub").projectDir = File("lib/rx-android-stub")
+
+include(":lib-buildconfig-android-stub")
+project(":lib-buildconfig-android-stub").projectDir = File("lib/buildconfig-android-stub")
+
 File(rootDir, "src").eachDir { dir ->
     dir.eachDir { subdir ->
         val name = ":${dir.name}-${subdir.name}"

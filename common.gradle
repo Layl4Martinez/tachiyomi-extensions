@@ -105,7 +105,14 @@ dependencies {
     compileOnly 'com.google.code.gson:gson:2.8.2'
     compileOnly 'com.github.salomonbrys.kotson:kotson:2.5.0'
     compileOnly project(':duktape-stub')
+
+    // Android stubs
     compileOnly project(':lib-android-stub')
+    compileOnly project(':lib-rx-android-stub')
+    compileOnly project(':lib-buildconfig-android-stub')
+
+    // Needed when android is not enabled
+    compileOnly 'org.json:json:20200518'
 }
 
 //preBuild.dependsOn(lintKotlin)
