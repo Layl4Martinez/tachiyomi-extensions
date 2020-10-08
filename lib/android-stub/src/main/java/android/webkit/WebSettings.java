@@ -11,5 +11,4 @@ public abstract class WebSettings {
     public abstract boolean getLoadWithOverviewMode();
     public abstract void setUserAgentString(String ua);
     public abstract String getUserAgentString();
-
 }

@@ -23,15 +23,12 @@ public final class Bitmap {
         }
         final int nativeInt;
     }
-
     public static Bitmap createBitmap(int width, int height, Config config) throws Exception {
         throw new Exception("stub");
     }
     public final int getWidth() throws Exception {
         throw new Exception("stub");
     }
-
-    /** Returns the bitmap's height */
     public final int getHeight() throws Exception {
         throw new Exception("stub");
     }

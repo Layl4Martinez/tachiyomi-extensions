@@ -10,8 +10,5 @@ import static java.lang.annotation.ElementType.FIELD;
 @Target({TYPE, METHOD, CONSTRUCTOR, FIELD})
 @Retention(RetentionPolicy.CLASS)
 public @interface TargetApi {
-    /**
-     * This sets the target api level for the type..
-     */
     int value();
 }

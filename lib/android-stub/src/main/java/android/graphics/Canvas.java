@@ -8,7 +8,6 @@ public class Canvas {
                            Paint paint) throws Exception {
         throw new Exception("stub");
     }
-
     public void drawBitmap(Bitmap bitmap, float left, float top, Paint paint) throws Exception {
         throw new Exception("stub");
     }

@@ -5,11 +5,6 @@ import android.graphics.Paint;
 import android.view.View;
 
 public class WebView extends View {
-
-    /**
-     * Construct a new WebView with a Context object.
-     * @param context A Context object used to access application assets.
-     */
     public WebView(Context context) throws Exception {
         throw new Exception("stub");
     }
