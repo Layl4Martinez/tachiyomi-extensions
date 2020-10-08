@@ -5,20 +5,20 @@ import android.os.Bundle;
 import android.view.ContextThemeWrapper;
 
 public class Activity extends ContextThemeWrapper {
-    public Intent getIntent() throws Exception {
-        throw new Exception("stub");
+    public Intent getIntent() {
+        throw new UnsupportedOperationException("stub");
     }
-    public void setIntent(Intent newIntent) throws Exception {
-        throw new Exception("stub");
+    public void setIntent(Intent newIntent) {
+        throw new UnsupportedOperationException("stub");
     }
-    public void onCreate(Bundle savedInstanceState) throws Exception {
-        throw new Exception("stub");
+    public void onCreate(Bundle savedInstanceState) {
+        throw new UnsupportedOperationException("stub");
     }
     @Override
-    public void startActivity(Intent intent) throws Exception {
-        throw new Exception("stub");
+    public void startActivity(Intent intent) {
+        throw new UnsupportedOperationException("stub");
     }
-    public void finish() throws Exception {
-        throw new Exception("stub");
+    public void finish() {
+        throw new UnsupportedOperationException("stub");
     }
 }

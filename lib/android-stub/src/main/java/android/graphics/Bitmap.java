@@ -23,16 +23,16 @@ public final class Bitmap {
         }
         final int nativeInt;
     }
-    public static Bitmap createBitmap(int width, int height, Config config) throws Exception {
-        throw new Exception("stub");
+    public static Bitmap createBitmap(int width, int height, Config config) {
+        throw new UnsupportedOperationException("stub");
     }
-    public final int getWidth() throws Exception {
-        throw new Exception("stub");
+    public final int getWidth() {
+        throw new UnsupportedOperationException("stub");
     }
-    public final int getHeight() throws Exception {
-        throw new Exception("stub");
+    public final int getHeight() {
+        throw new UnsupportedOperationException("stub");
     }
-    public boolean compress(CompressFormat format, int quality, OutputStream stream) throws Exception {
-        throw new Exception("stub");
+    public boolean compress(CompressFormat format, int quality, OutputStream stream) {
+        throw new UnsupportedOperationException("stub");
     }
 }
