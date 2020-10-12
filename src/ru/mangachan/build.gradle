@@ -1,4 +1,4 @@
-apply plugin: 'kotlin'
+apply from: "$rootDir/prefix.gradle"
 
 ext {
     extName = 'Mangachan'
@@ -12,4 +12,4 @@ dependencies {
     implementation project(':lib-ratelimit')
 }
 
-apply from: "$rootDir/common.gradle"
+apply from: "$rootDir/suffix.gradle"

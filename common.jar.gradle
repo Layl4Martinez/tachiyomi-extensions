@@ -1,0 +1,45 @@
+task extensionJar(type: Jar) {
+    manifest {
+        attributes(
+                'Class-Path'     : extClass,
+                'nsfw'           : project.ext.properties.getOrDefault("containsNsfw", false) ? 1 : 0,
+                'extClass'       : extClass,
+                'versionName'    : "$libVersion.$extVersionCode"
+        )
+    }
+    archivesBaseName = "tachiyomi-$pkgNameSuffix-v$libVersion.$extVersionCode"
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    with jar
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+        resources {
+            srcDirs = ['res']
+        }
+    }
+}
+
+compileKotlin {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+dependencies {
+    // Android stubs
+    compileOnly project(':lib-android-stub')
+    compileOnly project(':lib-rx-android-stub')
+    compileOnly project(':lib-buildconfig-android-stub')
+
+    // Needed when android is not enabled
+    compileOnly 'org.json:json:20200518'
+}

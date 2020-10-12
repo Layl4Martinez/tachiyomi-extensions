@@ -1,4 +1,4 @@
-apply plugin: 'kotlin'
+apply from: "$rootDir/prefix.gradle"
 apply plugin: 'kotlinx-serialization'
 
 ext {
@@ -15,4 +15,4 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-protobuf:$serialization_version"
 }
 
-apply from: "$rootDir/common.gradle"
+apply from: "$rootDir/suffix.gradle"

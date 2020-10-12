@@ -1,4 +1,4 @@
-apply plugin: 'kotlin'
+apply from: "$rootDir/prefix.gradle"
 
 ext {
     extName = 'Japscan'
@@ -12,4 +12,4 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.8.1'
 }
 
-apply from: "$rootDir/common.gradle"
+apply from: "$rootDir/suffix.gradle"

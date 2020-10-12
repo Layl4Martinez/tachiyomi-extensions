@@ -1,4 +1,4 @@
-apply plugin: 'kotlin'
+apply from: "$rootDir/prefix.gradle"
 
 ext {
     extName = 'Swords Comic'
@@ -8,4 +8,4 @@ ext {
     libVersion = '1.2'
 }
 
-apply from: "$rootDir/common.gradle"
+apply from: "$rootDir/suffix.gradle"
